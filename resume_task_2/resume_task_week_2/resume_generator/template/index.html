@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Building Webpage</title>
+    <!-- <link rel="stylesheet" href="styles/styles.css"> -->
+<style>
+
+.container {
+    width: 800px;
+    margin: 15px;
+    border: 2px solid black;
+    padding: 15px;
+}
+
+.student-info {
+    display: flex;
+}
+
+.student-detail {
+    flex-grow: 8;
+    padding: 10px;
+}
+
+.student-detail #student-name {
+    font-weight: bold;
+    font-size: large;
+}
+
+.student-detail > p {
+    margin: 5px;
+}
+
+.student-personal-info {
+    padding: 10px;
+}
+
+#topic {
+    font-weight: bold;
+}
+
+.student-objective {
+    padding: 10px;
+    margin: 10px;
+    width: 780px;
+}
+
+.student-education {
+    padding: 10px;
+    margin: 10px;
+}
+
+#left-val {
+    width: 120px;
+}
+
+#right-val {
+    width: 630px;
+    margin: 5px;
+}
+
+.student-education #right-val > p {
+    margin: 5px;
+}
+
+.student-projects {
+    padding: 10px;
+    margin: 10px;
+    width: 780px;
+}
+
+.student-projects #right-val {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.student-technical-skills {
+    padding: 10px;
+    margin: 10px;
+    width: 780px;
+}
+
+.student-achievements {
+    padding: 10px;
+    margin: 10px;
+    width: 780px;   
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="student-info">
+            <div class="student-detail">
+                <p id="student-name">{{.StudentName}}</p>
+                <p>{{.StudentDegree}}</p>
+                <p>{{.StudentCollege}}</p>
+            </div>                        
+
+            <div class="student-personal-info">
+                <table>
+                    <tr>
+                        <td>Phone</td>
+                        <td>: {{.PhoneNumber}}</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>: {{.EmailAddress}}</td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td>: {{.StudentAddress}}</td>
+                    </tr>
+                    <tr>
+                        <td>LinkedIn</td>
+                        <td>: {{.LinkedinId}}</td>
+                    </tr>
+                    <tr>
+                        <td>Github</td>
+                        <td>: {{.GithubId}}</td>
+                    </tr>
+                </table>
+            </div>     
+        </div>
+
+        <div class="line">
+            <hr>
+        </div>
+
+        <div class="other-info">
+            <div class="student-objective">
+                <p id="topic">Objective</p>
+                <p> {{.StudentObjective}}
+                </p>
+            </div>
+            <div class="student-education">
+                <table>
+                    <tr>
+                        <td id="topic">Education</td>
+                    </tr>
+                    <tr>
+                        <td id="left-val">{{.StudentDegreeYear}}</td>
+                        <td id="right-val">
+                            <p>{{.StudentDegree}}</p>
+                            <p>{{.StudentDegreePercentage}}</p>
+                            <p>{{.StudentCollege}}</p>                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="left-val">{{.StudentTwelfthYear}}</td>
+                        <td id="right-val">
+                            <p>12th Grade Percentage - {{.StudentTwelfthPercentage}}%</p>
+                            <p>{{.StudentTwelfthSchool}}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="left-val">{{.StudentTenthYear}}</td>
+                        <td id="right-val">
+                            <p>10th Grade Percentage - {{.StudentTenthPercentage}}%</p>
+                            <p>{{.StudentTenthSchool}}</p>
+                        </td>
+                    </tr>                    
+                </table>
+            </div>
+            <!-- <div class="student-projects">
+                <table>
+                    <tr>
+                        <td id="topic">Projects</td>
+                    </tr>
+                    <tr>
+                        <td id="left-val">Online Shopping Website</td>
+                        <td id="right-val">                           
+                            <ul>
+                                <li>
+                                    <a id="project-1" href="https://github.com/deepakshankar52/websites/tree/main/online_shopping">
+                                        Online Shopping Website with HTML and CSS
+                                    </a>
+                                </li>
+                                <li>My online shopping website offers various product categories, brands and shows its prices.</li>
+                                <li>I used basic HTML and CSS for the front-end development.</li>
+                                <li>This project is user-friendly on both desktop and mobile platforms.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Blog Site</td>
+                        <td>                           
+                            <ul>
+                                <li>
+                                    <a id="project-1" href="https://github.com/deepakshankar52/Blog-Site">
+                                        Blog Site using REACT
+                                    </a>
+                                </li>
+                                <li>This blog site is created using basic REACT and its functionalities.</li>
+                                <li>Our blog site starts with a landing page which offers the existing blog list.</li>
+                                <li>TUser can create new blog and the new blog will stored in a Json file which acts as the database for the blog site.</li>
+                                <li>User can also delete the existing blogs in the blog site which is also removed in database powered by Json.</li>
+                                <li>Using simple REACT components, the blog site will work more precise.</li>
+                            </ul>
+                        </td>
+                    </tr>                  
+                </table>
+            </div>
+            <div class="student-technical-skills">
+                <table>
+                    <tr>
+                        <td id="topic">Technical Skills</td>
+                    </tr>
+                    <tr>
+                        <td id="left-val">Languages</td>
+                        <td id="right-val">: C, Python</td>
+                    </tr>
+                    <tr>
+                        <td id="left-val">Web Technologies</td>
+                        <td id="right-val">: HTML, CSS, JavaScript, REACT</td>
+                    </tr>
+                    <tr>
+                        <td id="left-val">Version Control Tool</td>
+                        <td id="right-val">: Git and GitHub</td>
+                    </tr>                                        
+                </table>
+            </div>
+            <div class="student-achievements">
+                <table>
+                    <tr>
+                        <td id="topic">Achievements & Awards</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ol>
+                                <li>Participated in Smart India Hackathon 2022 and reached Grand Finale held at CGC, Punjab.</li>
+                            </ol>
+                        </td>
+                    </tr>
+                </table>
+            </div> -->
+        </div>
+    </div>
+</body>
+</html>

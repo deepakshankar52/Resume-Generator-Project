@@ -1,0 +1,79 @@
+.container {
+    width: 800px;
+    margin: 15px;
+    border: 2px solid black;
+    padding: 15px;
+}
+
+.student-info {
+    display: flex;
+}
+
+.student-detail {
+    flex-grow: 8;
+    padding: 10px;
+}
+
+.student-detail #student-name {
+    font-weight: bold;
+    font-size: large;
+}
+
+.student-detail > p {
+    margin: 5px;
+}
+
+.student-personal-info {
+    padding: 10px;
+}
+
+#topic {
+    font-weight: bold;
+}
+
+.student-objective {
+    padding: 10px;
+    margin: 10px;
+    width: 780px;
+}
+
+.student-education {
+    padding: 10px;
+    margin: 10px;
+}
+
+#left-val {
+    width: 120px;
+}
+
+#right-val {
+    width: 630px;
+    margin: 5px;
+}
+
+.student-education #right-val > p {
+    margin: 5px;
+}
+
+.student-projects {
+    padding: 10px;
+    margin: 10px;
+    width: 780px;
+}
+
+.student-projects #right-val {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.student-technical-skills {
+    padding: 10px;
+    margin: 10px;
+    width: 780px;
+}
+
+.student-achievements {
+    padding: 10px;
+    margin: 10px;
+    width: 780px;   
+}
